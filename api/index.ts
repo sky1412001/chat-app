@@ -1,5 +1,9 @@
 import server from "../src/server";
 
+export const config = {
+  runtime: "nodejs",
+};
+
 export default async function handler(req: any, res: any) {
   const url = new URL(req.url, `http://${req.headers.host}`);
 
