@@ -1,4 +1,4 @@
-import server from "../src/server";
+import server from "../dist/server/server.js";
 
 export const config = {
   runtime: "nodejs",
