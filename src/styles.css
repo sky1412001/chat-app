@@ -1,0 +1,128 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chat-bg: var(--chat-bg);
+  --color-bubble-out: var(--bubble-out);
+  --color-bubble-out-foreground: var(--bubble-out-foreground);
+  --color-bubble-in: var(--bubble-in);
+  --color-bubble-in-foreground: var(--bubble-in-foreground);
+  --color-online: var(--online);
+}
+
+:root {
+  --radius: 0.85rem;
+  --background: #020b06;
+  --foreground: #b7ffd7;
+  --card: rgba(0, 25, 16, 0.92);
+  --card-foreground: #d8ffcb;
+  --popover: rgba(3, 24, 14, 0.98);
+  --popover-foreground: #c8ffd6;
+  --primary: #2cff9b;
+  --primary-foreground: #03150f;
+  --secondary: #0d8c50;
+  --secondary-foreground: #c8ffd6;
+  --muted: #05130b;
+  --muted-foreground: #7be8a4;
+  --accent: #16ff8d;
+  --accent-foreground: #031c10;
+  --destructive: #ff5f5f;
+  --destructive-foreground: #111;
+  --border: rgba(41, 255, 150, 0.22);
+  --input: rgba(4, 29, 15, 0.95);
+  --ring: #24ff9e;
+
+  --chat-bg: #010b05;
+  --bubble-out: rgba(22, 76, 45, 0.92);
+  --bubble-out-foreground: #c9ffd5;
+  --bubble-in: rgba(18, 102, 54, 0.96);
+  --bubble-in-foreground: #e5ffe2;
+  --online: #8effa8;
+}
+
+.dark {
+  --background: #07182e;
+  --foreground: #ecf7ff;
+  --card: #0f2f55;
+  --card-foreground: #f0f8ff;
+  --popover: #0b2748;
+  --popover-foreground: #e8f3ff;
+  --primary: #57f3d4;
+  --primary-foreground: #042c39;
+  --secondary: #48b8ff;
+  --secondary-foreground: #effbff;
+  --muted: #0b2750;
+  --muted-foreground: #97b9d3;
+  --accent: #7ce6ff;
+  --accent-foreground: #04242f;
+  --destructive: #ff7c88;
+  --destructive-foreground: #111827;
+  --border: #144876;
+  --input: #0d3156;
+  --ring: #79e4ff;
+  --chat-bg: #08162f;
+  --bubble-out: #0d446f;
+  --bubble-out-foreground: #e8f8ff;
+  --bubble-in: #1372a8;
+  --bubble-in-foreground: #f8fcff;
+  --online: #78f8c2;
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html, body, #root { height: 100%; }
+  body {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    background-color: var(--color-background);
+    background-image:
+      radial-gradient(circle at top left, rgba(46, 255, 154, 0.12), transparent 18%),
+      radial-gradient(circle at bottom right, rgba(22, 255, 135, 0.1), transparent 20%),
+      linear-gradient(180deg, #010b05 0%, #03110a 100%);
+    color: var(--color-foreground);
+    text-rendering: geometricPrecision;
+  }
+  body, button, input, textarea, select {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  }
+  .font-cursive {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  }
+  .glass-card {
+    background: rgba(2, 11, 6, 0.86);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(46, 255, 154, 0.18);
+  }
+  .hacker-glow {
+    box-shadow: 0 0 32px rgba(46, 255, 154, 0.18);
+  }
+  .terminal-text {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    letter-spacing: 0.03em;
+  }
+}
