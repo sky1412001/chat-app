@@ -12,5 +12,9 @@
       "src": "api/index.ts",
       "use": "@vercel/node"
     }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/api/index.ts" }
   ]
 }
