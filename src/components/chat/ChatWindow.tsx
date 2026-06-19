@@ -254,7 +254,7 @@ export function ChatWindow({ currentUserId, otherUserId, onBack }: Props) {
                   <div className={cn("flex", mine ? "justify-end" : "justify-start")}>
                     <div
                       className={cn(
-                        "max-w-[88%] rounded-3xl px-4 py-3 shadow-[0_0_28px_rgba(22,255,140,0.12)] sm:max-w-[72%] lg:max-w-[58%]",
+                        "text_mess rounded-3xl px-4 py-3 shadow-[0_0_28px_rgba(22,255,140,0.12)] sm:max-w-[72%] lg:max-w-[58%]",
                         mine
                           ? "rounded-br-[18px] bg-[#062918] text-[#d8ffd2] border border-[#16ff8d]/20"
                           : "rounded-bl-[18px] bg-[#092c16] text-[#c7ffd4] border border-[#13ff80]/15",

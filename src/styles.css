@@ -95,8 +95,16 @@
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
-  html, body, #root { height: 100%; }
+  * {
+    border-color: var(--color-border);
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
   body {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
     background-color: var(--color-background);
@@ -107,22 +115,36 @@
     color: var(--color-foreground);
     text-rendering: geometricPrecision;
   }
-  body, button, input, textarea, select {
+
+  body,
+  button,
+  input,
+  textarea,
+  select {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   }
+
   .font-cursive {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   }
+
   .glass-card {
     background: rgba(2, 11, 6, 0.86);
     backdrop-filter: blur(24px);
     border: 1px solid rgba(46, 255, 154, 0.18);
   }
+
   .hacker-glow {
     box-shadow: 0 0 32px rgba(46, 255, 154, 0.18);
   }
+
   .terminal-text {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
     letter-spacing: 0.03em;
   }
+}
+
+/* custom css start  */
+.text_mess {
+  max-width: 500px;
 }
